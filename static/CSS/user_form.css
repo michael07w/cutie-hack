@@ -1,0 +1,39 @@
+/* for the header of inputs */
+.input-section {
+  background-color: rgb(149, 65, 0, 0.19);
+  margin: 22vh 25vw;
+}
+
+.input-names {
+  display: flex;
+  justify-content: space-around;
+}
+
+h3 {
+  padding: 25px;
+}
+
+/* for inputs of weight heigh age */
+.text-inputs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-left: 1vw;
+}
+
+.text-inputs input {
+  background-color: rgb(149, 65, 0, 0.19);
+  border: none;
+  height: 35px;
+  width: 150px;
+  border-radius: 25px;
+}
+
+/* for difficulty selector */
+
+.difficulty-selector {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
