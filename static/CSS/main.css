@@ -12,8 +12,21 @@ body {
 /* header styles */
 header {
   display: flex;
+  align-items: center;
+  margin: 5vh 5vw;
 }
 
+header h1 {
+  font-size: 42px;
+  padding: 25px;
+}
+
+header img {
+  height: 75px;
+  width: auto;
+}
+
+/* other base elements starting points */
 h1 {
   color: #ff7000;
 }
@@ -30,4 +43,9 @@ button {
   width: 250px;
   height: 65px;
   border-radius: 20px;
+}
+
+button:hover {
+  background-color: #ce6802;
+  cursor: pointer;
 }
