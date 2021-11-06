@@ -1,0 +1,30 @@
+.workout-name {
+  margin-bottom: 20px;
+  text-decoration: underline;
+  font-size: 32px;
+}
+
+.workout-example {
+  margin-bottom: 20px;
+  max-width: 500px;
+  min-width: 250px;
+  height: auto;
+}
+
+.workout-timer {
+  display: flex;
+  background-color: rgb(255, 112, 0, 0.12);
+  width: 150px;
+  height: 50px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  margin: 20px;
+  font-size: 18px;
+}
