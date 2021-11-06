@@ -7,6 +7,7 @@ function storeValues() {
     const weight = document.getElementById("weight").value;
     const height = document.getElementById("height").value;
     const age = document.getElementById("age").value;
+    const difficulty = document.querySelector("input[name='difficulty']:checked").value;
 
     // Store user-entered values in JSON format in LocalStorage
     let weightJSON = JSON.stringify(weight);
@@ -17,4 +18,7 @@ function storeValues() {
 
     let ageJSON = JSON.stringify(age);
     sessionStorage.setItem("age", ageJSON);
+
+    let difficultyJSON = JSON.stringify(difficulty);
+    sessionStorage.setItem("difficulty", difficultyJSON);
 }
