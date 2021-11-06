@@ -28,6 +28,7 @@ h3 {
   height: 35px;
   width: 150px;
   border-radius: 25px;
+  padding-left: 12px;
 }
 
 /* for difficulty selector */

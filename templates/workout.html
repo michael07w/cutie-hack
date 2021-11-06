@@ -1,0 +1,28 @@
+{%extends "index.html"%}
+<!-- Title -->
+{%block title%}
+<title>Workout</title>
+{%endblock%}
+<!-- Styles -->
+{%block styles%}
+<link rel="stylesheet" href="/static/CSS/workout.css" />
+{%endblock%}
+<!-- content -->
+<!-- workout stuff is hard coded in for testing -->
+{%block content%}
+<!-- imput workout name -->
+<h2 class="workout-name"></h2>
+<!-- imput source of workout -->
+<img class="workout-example" src="" alt="workout" />
+<div class="workout-timer">
+  <!-- where timer will be placed -->
+  <h3></h3>
+</div>
+<!-- timer controls -->
+<div class="controls">
+  <button>previous</button>
+  <button>pause</button>
+  <button>next</button>
+  <button>skip</button>
+</div>
+{%endblock%}
