@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- style sheets -->
     <link rel="stylesheet" href="/static/CSS/main.css" />
+    {%block styles%}
     <link rel="stylesheet" href="/static/CSS/index.css" />
+    {%endblock%}
+    <!-- title -->
+    {%block title%}
     <title>HIIT The Clock</title>
+    {%endblock%}
   </head>
   <body>
     <header>
       <img src="/static/images/clockLogo.png" alt="Clock Logo" />
       <h1>HIT THE CLOCK</h1>
     </header>
+    {%block content%}
     <!-- This will be where the call of action is -->
     <div class="call-to-action">
       <h2>Punch in your workout today</h2>
       <a href="{{ url_for('user_form') }}"><button>Start</button></a>
     </div>
+    {%endblock%}
     <!-- scripts  -->
     <script src="/static/JS/user.js"></script>
     <script src="/static/JS/timer.js"></script>

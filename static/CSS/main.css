@@ -40,7 +40,7 @@ h2 {
 
 button {
   background-color: #dd7000;
-  color: #dbdbdb;
+  color: #e9e9e9;
   font-size: 24px;
   border: none;
   width: 250px;
@@ -49,7 +49,7 @@ button {
 }
 
 button a {
-  color: #dbdbdb;
+  color: #e9e9e9;
   text-decoration: none;
 }
 

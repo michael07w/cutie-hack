@@ -1,25 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- style sheets -->
-    <title>HIIT The Clock</title>
-  </head>
-  <body>
-    <header>
-      <h1>Hit The Clock</h1>
-    </header>
-    <!-- This will be where the call of action is -->
-    <div class="call-to-action">
-      <h2>Enter your info sucka.</h2>
-      <button>Next</button>
+{%extends "index.html"%}
+<!-- Title -->
+{%block title%}
+<title>User Input</title>
+{%endblock%}
+<!-- Styles -->
+{%block styles%}
+<link rel="stylesheet" href="/static/CSS/user_form.css" />
+{%endblock%}
+<!-- content -->
+{%block content%}
+<div class="input-section">
+  <form action="POST">
+    <!-- input header -->
+    <div class="input-names">
+      <h3>Weight (LB)</h3>
+      <h3>Height (IN)</h3>
+      <h3>Age</h3>
     </div>
-    <!-- scripts  -->
-    <script src="/static/JS/user.js"></script>
-    <script src="/static/JS/timer.js"></script>
-    <script src="/static/JS/app.js"></script>
-    <script src="/static/JS/workout.js"></script>
-  </body>
-</html>
+    <!-- inputs -->
+    <div class="text-inputs">
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+    </div>
+    <!-- difficulty selector -->
+    <h3 id="difficulty-header">Difficulty</h3>
+    <div class="difficulty-selector">
+      <input type="radio" id="easy" name="difficulty" value="1" />
+      <label id="easy" for="easy">EASY</label><br />
+      <input type="radio" id="average" name="difficulty" value="2" />
+      <label id="average" for="average">AVERAGE</label><br />
+      <input type="radio" id="intense" name="difficulty" value="3" />
+      <label id="intense" for="intense">INTENSE</label>
+    </div>
+  </form>
+</div>
+<button>Generate Workout</button>
+<script src="/static/JS/user_form.js"></script>
+{%endblock%}
