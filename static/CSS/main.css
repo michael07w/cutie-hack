@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +9,7 @@
 body {
   background-color: #ffe3bb;
   text-align: center;
+  font-family: 'Rowdies', cursive;
 }
 
 /* header styles */
@@ -43,6 +46,11 @@ button {
   width: 250px;
   height: 65px;
   border-radius: 20px;
+}
+
+button a {
+  color: #dbdbdb;
+  text-decoration: none;
 }
 
 button:hover {
