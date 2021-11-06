@@ -1,7 +1,7 @@
 /* for the header of inputs */
 .input-section {
   background-color: rgb(149, 65, 0, 0.19);
-  margin: 22vh 25vw;
+  margin: 15vh 25vw 3vh 25vw;
 }
 
 .input-names {
@@ -32,8 +32,61 @@ h3 {
 
 /* for difficulty selector */
 
+#difficulty-header {
+  margin-bottom: 50px;
+}
+
 .difficulty-selector {
   display: flex;
   text-align: center;
   justify-content: space-evenly;
+}
+
+/* .difficulty-selector input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+} */
+
+.difficulty-selector label {
+  margin-bottom: 8vh;
+  font-size: 20px;
+  border-radius: 25px;
+  width: 130px;
+  height: 32px;
+  padding-top: 4px;
+  align-items: center;
+}
+
+.difficulty-selector label:hover {
+  cursor: pointer;
+}
+
+#easy {
+  background-color: #2fce08;
+}
+#easy:hover {
+  background-color: #2cbd08;
+}
+
+#average {
+  background-color: #ffa800;
+}
+#average:hover {
+  background-color: #ec9f03;
+}
+
+#intense {
+  background-color: #de2424;
+}
+#intense:hover {
+  background-color: #bb1e1e;
+}
+
+.selected-difficulty {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
 }

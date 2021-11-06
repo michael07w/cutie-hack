@@ -13,8 +13,8 @@
   <form action="POST">
     <!-- input header -->
     <div class="input-names">
-      <h3>Weight</h3>
-      <h3>Height</h3>
+      <h3>Weight (LB)</h3>
+      <h3>Height (IN)</h3>
       <h3>Age</h3>
     </div>
     <!-- inputs -->
@@ -24,15 +24,17 @@
       <input type="text" />
     </div>
     <!-- difficulty selector -->
-    <h3>Difficulty</h3>
+    <h3 id="difficulty-header">Difficulty</h3>
     <div class="difficulty-selector">
       <input type="radio" id="easy" name="difficulty" value="1" />
-      <label for="easy">EASY</label><br />
+      <label id="easy" for="easy">EASY</label><br />
       <input type="radio" id="average" name="difficulty" value="2" />
-      <label for="average">MEDIUM</label><br />
-      <input type="radio" id="INTENSE" name="difficulty" value="3" />
-      <label for="javascript">INTENSE</label>
+      <label id="average" for="average">AVERAGE</label><br />
+      <input type="radio" id="intense" name="difficulty" value="3" />
+      <label id="intense" for="intense">INTENSE</label>
     </div>
   </form>
 </div>
+<button>Generate Workout</button>
+<script src="/static/JS/user_form.js"></script>
 {%endblock%}
