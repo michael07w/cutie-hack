@@ -3,6 +3,9 @@
 # Authors:
 Kyle Damschen & Michael Wessels
 
+# Tools:
+Hit The Clock leverages HMTL5, CSS3, JavaScript, and Python.
+
 # Dependencies:
 Flask, Python3
 
