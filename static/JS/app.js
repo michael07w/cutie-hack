@@ -36,6 +36,8 @@ function createWorkoutList(ourAthlete) {
 
 function processWorkout(workoutList, ourAthlete) {
   let currentWorkout = workoutList.head;
+  let workoutLocation = document.querySelector('.workout-name');
+  workoutLocation.textContent = currentWorkout.name;
   // timer initiation
   let workoutTimer = new Timer();
   workoutTimer.setTime(ourAthlete.difficulty);
