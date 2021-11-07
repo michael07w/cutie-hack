@@ -10,9 +10,9 @@ class Timer {
   setTime(difficulty) {
     // difficulty settings 1-3
     // setting time as in secounds
-    if (difficulty === 1) {
+    if (difficulty == 1) {
       this.time = 20;
-    } else if (difficulty === 2) {
+    } else if (difficulty == 2) {
       this.time = 30;
     } else {
       this.time = 45;

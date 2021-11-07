@@ -15,9 +15,9 @@ function createWorkoutList(ourAthlete) {
   let firstWorkout, secondWorkout, thirdWorkout;
 
   if (ourAthlete.difficulty == 1) {
-    firstWorkout = new Workout('Lunges', "/static/images/lunge.jpg");
-    secondWorkout = new Workout('High Knees', "/static/images/high-knees.jpg");
-    thirdWorkout = new Workout('Squats', "/static/images/squat.jpg");
+    firstWorkout = new Workout('Lunges', '/static/images/lunge.jpg');
+    secondWorkout = new Workout('High Knees', '/static/images/high-knees.jpg');
+    thirdWorkout = new Workout('Squats', '/static/images/squat.jpg');
   } else if (ourAthlete.difficulty == 2) {
     firstWorkout = new Workout('Plank-Ups');
     secondWorkout = new Workout('Crunches');
@@ -38,7 +38,7 @@ function createWorkoutList(ourAthlete) {
 // workout driver
 function processWorkout(workoutList, ourAthlete) {
   let currentWorkout = workoutList.head;
-  
+
   // display workout details
   let workoutLocation = document.querySelector('.workout-name');
   workoutLocation.textContent = currentWorkout.name;
@@ -49,8 +49,16 @@ function processWorkout(workoutList, ourAthlete) {
   workoutTimer.setTime(ourAthlete.difficulty);
   workoutTimer.drawTimer();
   // ticker for clock (Running clock)
+  //bandaids make the world go round
   setInterval(function tickHelper() {
-    workoutTimer.tick();
+    if (workoutTimer.tick()) {
+      currentWorkout = currentWorkout.next;
+      if (currentWorkout != null) {
+        workoutTimer.setTime(ourAthlete.difficulty);
+        workoutLocation.textContent = currentWorkout.name;
+        document.querySelector('.workout-example').src = currentWorkout.example;
+      }
+    }
     console.log(workoutTimer.time);
   }, 1000);
   // clock runs
