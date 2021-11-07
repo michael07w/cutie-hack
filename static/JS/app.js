@@ -1,3 +1,5 @@
+const nextButton = document.querySelector('#next');
+console.log(nextButton);
 // main driver for the application
 function runApp(weight, height, age, difficulty) {
   // Instantiate user
@@ -33,7 +35,7 @@ function createWorkoutList(ourAthlete) {
 
   return workoutList;
 }
-
+// workout driver
 function processWorkout(workoutList, ourAthlete) {
   let currentWorkout = workoutList.head;
   let workoutLocation = document.querySelector('.workout-name');
