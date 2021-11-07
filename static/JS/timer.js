@@ -19,6 +19,11 @@ class Timer {
     }
   }
 
+  drawTimer() {
+    let timerLocation = document.querySelector('.workout-timer h3');
+    timerLocation.textContent = this.time + ' s';
+  }
+
   // tick needs another function call in app in order to run correctly
   // and update the time
 
@@ -28,8 +33,11 @@ class Timer {
   tick() {
     if (this.time > 0) {
       this.time--;
+      this.drawTimer();
+      return false;
     } else {
       console.log('time is done');
+      return true;
     }
   }
 }
