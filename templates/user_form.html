@@ -10,7 +10,7 @@
 <!-- content -->
 {%block content%}
 <div class="input-section">
-  <form action="POST">
+  <form id="user-inputs" action="#" method="post">
     <!-- input header -->
     <div class="input-names">
       <h3>Weight (LB)</h3>
@@ -19,9 +19,9 @@
     </div>
     <!-- inputs -->
     <div class="text-inputs">
-      <input id="weight" type="text" />
-      <input id="height" type="text" />
-      <input id="age" type="text" />
+      <input id="weight" type="text" name="weight" />
+      <input id="height" type="text" name="height" />
+      <input id="age" type="text" name="age" />
     </div>
     <!-- difficulty selector -->
     <h3 id="difficulty-header">Difficulty</h3>
@@ -35,6 +35,8 @@
     </div>
   </form>
 </div>
-<button id="submit" onclick="storeValues()">Generate Workout</button>
+<button form="user-inputs" id="submit" onclick="storeValues()">
+  Generate Workout
+</button>
 <script src="/static/JS/user_data.js"></script>
 {%endblock%}
