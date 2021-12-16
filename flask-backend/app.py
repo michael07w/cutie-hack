@@ -11,6 +11,12 @@ def home():
     return render_template("index.html")
 
 
+# testing to see if we can import react
+@app.route("/react")
+def reactWorkout():
+    return render_template("reactWorkout.html", flask_token= 'test')
+
+
 @app.route("/user_form", methods=['GET', 'POST'])
 def user_form():
     # serves page to get user info
