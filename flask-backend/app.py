@@ -1,8 +1,9 @@
-from os import name
 from flask import Flask, redirect, url_for, render_template, request, session
+from workout_api import workout_blueprint
 
 app = Flask(__name__)
-app.secret_key = 'cutie hack'
+app.secret_key = "cutie hack"
+app.register_blueprint(workout_blueprint)
 
 
 @app.route("/")
@@ -14,21 +15,21 @@ def home():
 # testing to see if we can import react
 @app.route("/react")
 def reactWorkout():
-    return render_template("reactWorkout.html", flask_token= 'test')
+    return render_template("reactWorkout.html", flask_token="test")
 
 
-@app.route("/user_form", methods=['GET', 'POST'])
+@app.route("/user_form", methods=["GET", "POST"])
 def user_form():
     # serves page to get user info
-    if request.method == 'GET':
+    if request.method == "GET":
         return render_template("user_form.html")
     # logic for post request
     else:
-        session["height"] = request.form['height']
-        session["weight"] = request.form['weight']
-        session["age"] = request.form['age']
-        session["difficulty"] = request.form['difficulty']
-        return redirect(url_for('workout'))
+        session["height"] = request.form["height"]
+        session["weight"] = request.form["weight"]
+        session["age"] = request.form["age"]
+        session["difficulty"] = request.form["difficulty"]
+        return redirect(url_for("workout"))
 
 
 @app.route("/workout")
@@ -39,7 +40,9 @@ def workout():
     weight = session["weight"]
     age = session["age"]
     difficulty = session["difficulty"]
-    return render_template("workout.html", height=height, weight=weight, age=age, difficulty=difficulty)
+    return render_template(
+        "workout.html", height=height, weight=weight, age=age, difficulty=difficulty
+    )
 
 
 if __name__ == "__main__":

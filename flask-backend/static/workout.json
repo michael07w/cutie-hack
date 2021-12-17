@@ -1,0 +1,99 @@
+{
+    "workouts": [
+        {
+            "id": 1,
+            "workout": "Pushups",
+            "examplePath":""
+        },
+        {
+            "id": 2,
+            "workout": "Bear Crawls",
+            "examplePath": ""
+        },
+        {
+            "id": 3,
+            "workout": "Supermans",
+            "examplePath": ""
+        },
+        {
+            "id": 4,
+            "workout": "Body Squats",
+            "examplePath": ""
+        },
+        {
+            "id": 5,
+            "workout": "Tricep Dips",
+            "examplePath": ""
+        },
+        {
+            "id": 6,
+            "workout": "Mountain Climbers",
+            "examplePath": ""
+        },
+        {
+            "id": 7,
+            "workout": "Burpees",
+            "examplePath": ""
+        },
+        {
+            "id": 8,
+            "workout": "High Knees",
+            "examplePath": ""
+        },
+        {
+            "id": 9,
+            "workout": "Diamond Pushups",
+            "examplePath": ""
+        },
+        {
+            "id": 10,
+            "workout": "Jump Squats",
+            "examplePath": ""
+        },
+        {
+            "id": 11,
+            "workout": "Lunges",
+            "examplePath": ""
+        },
+        {
+            "id": 12,
+            "workout": "V-Ups",
+            "examplePath": ""
+        },
+        {
+            "id": 13,
+            "workout": "Jumping Jacks",
+            "examplePath": ""
+        },
+        {
+            "id": 14,
+            "workout": "Calf Raisers",
+            "examplePath": ""
+        },
+        {
+            "id": 16,
+            "workout": "Mountain Climber Twists",
+            "examplePath": ""
+        },
+        {
+            "id": 17,
+            "workout": "Skater Hops",
+            "examplePath": ""
+        },
+        {
+            "id": 18,
+            "workout": "Hip Thrust",
+            "examplePath": ""
+        },
+        {
+            "id": 19,
+            "workout": "Hip Thrust",
+            "examplePath": ""
+        },
+        {
+            "id": 20,
+            "workout": "Crunches",
+            "examplePath": ""
+        }
+    ]
+}
