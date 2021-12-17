@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
 
+:root {
+  --tealMain: #2aafd9;
+  --tealLighter: rgb(42, 175, 217, 0.8);
+  --softWhite: #e5e5e5;
+  --backgroundColor: #111e2f;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +14,7 @@
 }
 
 body {
-  background-color: #ffe3bb;
+  background-color: var(--backgroundColor);
   text-align: center;
   font-family: 'Rowdies', cursive;
 }
@@ -31,16 +38,16 @@ header img {
 
 /* other base elements starting points */
 h1 {
-  color: #ff7000;
+  color: var(--tealMain);
 }
 
 h2 {
-  color: rgb(255, 112, 0, 0.81);
+  color: var(--tealMain);
 }
 
 button {
-  background-color: #dd7000;
-  color: #e9e9e9;
+  background-color: var(--tealLighter);
+  color: var(--softWhite);
   font-size: 24px;
   border: none;
   width: 250px;
@@ -49,11 +56,21 @@ button {
 }
 
 button a {
-  color: #e9e9e9;
+  color: var(--softWhite);
   text-decoration: none;
 }
 
 button:hover {
-  background-color: #ce6802;
+  background-color: rgba(37, 151, 185, 0.8);
   cursor: pointer;
+}
+
+.white-highlight {
+  color: var(--softWhite);
+}
+
+header a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }

@@ -16,13 +16,15 @@
   </head>
   <body>
     <header>
-      <img src="/static/images/clockLogo.png" alt="Clock Logo" />
-      <h1>HIIT THE CLOCK</h1>
+      <a href="{{ url_for('home') }}">
+        <img src="/static/images/clockLogo.png" alt="Clock Logo" />
+        <h1><span class="white-highlight">HITT</span> THE CLOCK</h1>
+      </a>
     </header>
     {%block content%}
     <!-- This will be where the call of action is -->
     <div class="call-to-action">
-      <h2>Punch in your workout today</h2>
+      <h2>Punch in <span class="white-highlight">your</span> workout today</h2>
       <a href="{{ url_for('user_form') }}"><button>Start</button></a>
     </div>
     {%endblock%}

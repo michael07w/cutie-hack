@@ -1,12 +1,14 @@
 /* for the header of inputs */
 .input-section {
-  background-color: rgb(149, 65, 0, 0.19);
+  background-color: #83b8c9;
   margin: 15vh 25vw 3vh 25vw;
+  border-radius: 25px;
 }
 
 .input-names {
   display: flex;
   justify-content: space-around;
+  color: #252525;
 }
 
 h3 {
@@ -23,7 +25,7 @@ h3 {
 }
 
 .text-inputs input {
-  background-color: rgb(149, 65, 0, 0.19);
+  background-color: rgb(120, 125, 128, 0.5);
   border: none;
   height: 35px;
   width: 150px;
@@ -35,6 +37,7 @@ h3 {
 
 #difficulty-header {
   margin-bottom: 50px;
+  color: #252525;
 }
 
 .difficulty-selector {
@@ -66,24 +69,24 @@ h3 {
 }
 
 #easy {
-  background-color: #2fce08;
+  background-color: #24c87d;
 }
 #easy:hover {
-  background-color: #2cbd08;
+  background-color: #1fb16f;
 }
 
 #average {
-  background-color: #ffa800;
+  background-color: #fddd5c;
 }
 #average:hover {
-  background-color: #ec9f03;
+  background-color: #ddc150;
 }
 
 #intense {
-  background-color: #de2424;
+  background-color: #ff4949;
 }
 #intense:hover {
-  background-color: #bb1e1e;
+  background-color: #dd3e3e;
 }
 
 .selected-difficulty {
