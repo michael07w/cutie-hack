@@ -1,5 +1,6 @@
 from flask import Blueprint
 import json
+import random
 
 # Blue print used so we can separate the api from the app
 workout_blueprint = Blueprint(
@@ -17,8 +18,10 @@ def generate_workout(difficulty):
     # randomly select workouts based off difficulty
     generated_workout = {"workouts": [], "difficulty": 0}
     generated_workout["workouts"].append(workouts_json["workouts"][0])
+    while len(generated_workout["workouts"]) < 4:
+        print(random.randint(1, len(workouts_json["workouts"])))
+        generated_workout["workouts"].append(workouts_json["workouts"][0])
     # set timer based off of difficulty
-    print(difficulty)
     if difficulty == "easy":
         generated_workout["difficulty"] = 1
     elif difficulty == "average":
