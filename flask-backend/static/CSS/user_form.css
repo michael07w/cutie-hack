@@ -46,14 +46,6 @@ h3 {
   justify-content: space-evenly;
 }
 
-/* .difficulty-selector input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-} */
-
 .difficulty-selector label {
   margin-bottom: 8vh;
   font-size: 20px;
@@ -62,6 +54,8 @@ h3 {
   height: 32px;
   padding-top: 4px;
   align-items: center;
+  transition: 0.5s;
+  transform: translateY(-15);
 }
 
 .difficulty-selector label:hover {
@@ -89,8 +83,14 @@ h3 {
   background-color: #dd3e3e;
 }
 
+/* hide the radio button */
+[type='radio'] {
+  display: none;
+}
+
 .selected-difficulty {
-  border-style: solid;
-  border-color: #000000;
-  border-width: 2px;
+  border-width: 2.5px;
+  transition: 0.5s;
+  transform: translateY(-15px);
+  box-shadow: rgba(59, 61, 63, 0.5) 7px 14px;
 }
