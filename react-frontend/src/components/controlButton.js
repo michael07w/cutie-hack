@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import '../css/controlButtons.css'
 
-function controlButton() {
-    return (
-        <div>
-            
-        </div>
-    )
+function ControlButton(props) {
+  return (
+  <div>
+      <button className= {props.type}>
+        <img src= {props.iconPath} alt="" />
+      </button>
+  </div>);
 }
 
-export default controlButton
+export default ControlButton;
