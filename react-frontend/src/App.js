@@ -1,24 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import './CSS/main.css'
+import Example from './components/Example';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <header>
+        <a href="/">
+          <img src="/static/images/clockLogo.png" alt="Clock Logo" />
+          <h1><span class="white-highlight">HITT</span> THE CLOCK</h1>
         </a>
-        <h1>this is a test</h1>
       </header>
+      <h2 className= 'workout-name'>Pushups</h2>
+      <Example></Example>
     </div>
   );
 }
