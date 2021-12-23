@@ -12,12 +12,6 @@ def home():
     return render_template("index.html")
 
 
-# testing to see if we can import react
-@app.route("/react")
-def reactWorkout():
-    return render_template("reactWorkout.html", flask_token="test")
-
-
 @app.route("/user_form", methods=["GET", "POST"])
 def user_form():
     # serves page to get user info
@@ -32,17 +26,24 @@ def user_form():
         return redirect(url_for("workout"))
 
 
+# testing to see if we can import react
 @app.route("/workout")
 def workout():
-    # serves page to get user info
-    height = session["height"]
-    print(height)
-    weight = session["weight"]
-    age = session["age"]
-    difficulty = session["difficulty"]
-    return render_template(
-        "workout.html", height=height, weight=weight, age=age, difficulty=difficulty
-    )
+    return render_template("reactWorkout.html", flask_token="test")
+
+
+# old workout logic
+# @app.route("/workout")
+# def workout():
+#     # serves page to get user info
+#     height = session["height"]
+#     print(height)
+#     weight = session["weight"]
+#     age = session["age"]
+#     difficulty = session["difficulty"]
+#     return render_template(
+#         "workout.html", height=height, weight=weight, age=age, difficulty=difficulty
+#     )
 
 
 if __name__ == "__main__":

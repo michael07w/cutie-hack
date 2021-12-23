@@ -1,0 +1,28 @@
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+}
+
+button img {
+  max-width: 35px;
+  height: auto;
+  padding-top: 5px;
+}
+
+/* other color buttons  */
+.pause {
+  background-color: #ffa800;
+}
+
+.pause:hover {
+  background-color: #e69900;
+}
+
+.stop {
+  background-color: #de2424;
+}
+
+.stop:hover {
+  background-color: #c42121;
+}
