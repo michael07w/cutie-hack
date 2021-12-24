@@ -1,5 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request, session
-from workout_api import workout_blueprint
+from workout_api import workout_blueprint, generate_workout
+import json
 
 app = Flask(__name__)
 app.secret_key = "cutie hack"
@@ -19,10 +20,23 @@ def user_form():
         return render_template("user_form.html")
     # logic for post request
     else:
-        session["height"] = request.form["height"]
-        session["weight"] = request.form["weight"]
-        session["age"] = request.form["age"]
-        session["difficulty"] = request.form["difficulty"]
+        # collect user-entered data
+        user_data = request.form
+
+        # format difficulty to match logic in workout_api
+        if user_data['difficulty'] == '1':
+            difficulty = "easy"
+        elif user_data['difficulty'] == '2':
+            difficulty = "average"
+        else:
+            difficulty = "intense"
+
+        # get workouts, based on difficulty, from workout_api
+        regimen = generate_workout(difficulty)
+
+        # print regimen to terminal to verify
+        print(regimen)
+
         return redirect(url_for("workout"))
 
 

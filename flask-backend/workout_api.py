@@ -19,7 +19,7 @@ def generate_workout(difficulty):
         returns jsonfied data of a randomly generated workouts
     '''
     # read json file of workouts
-    file = open("flask-backend/static/workout.json")
+    file = open("static/workout.json") # removed "flask-backend" from path; is a relative filepath, not absolute
     workouts_json = json.load(file)
     # randomly select workouts based off difficulty
     generated_workout = {"workouts": [], "difficulty": 0}
