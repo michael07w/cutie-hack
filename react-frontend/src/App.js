@@ -14,6 +14,14 @@ function App() {
         randomWorkout => {
           setWorkout(randomWorkout['workouts'])
           console.log(randomWorkout['workouts'])
+          // sets the bounds to a window session variable
+          window.sessionStorage.setItem('currentPos', 0)
+          window.sessionStorage.setItem('maxPos', randomWorkout['workouts'].length -1)
+          // cleaning up session storeage string to make easier to work with
+          sessionStorage.setItem('age', sessionStorage['age'].replaceAll("\"", ""))
+          sessionStorage.setItem('weight', sessionStorage['weight'].replaceAll("\"", ""))
+          sessionStorage.setItem('height', sessionStorage['height'].replaceAll("\"", ""))
+          sessionStorage.setItem('difficulty', sessionStorage['difficulty'].replaceAll("\"", ""))
         }
       )
   },[])
