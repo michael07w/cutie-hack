@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './css/main.css';
 import './css/workout.css';
 import Example from './components/Example';
@@ -25,7 +25,9 @@ class App extends React.Component {
             workout: data['workouts'],
             dataIsLoaded: true}
         )
+        console.log(this.state.workout)
     })
+    
   }
 
   render() {
@@ -56,7 +58,7 @@ class App extends React.Component {
             </h1>
           </a>
         </header>
-        <WorkoutName></WorkoutName>
+        <WorkoutName workout = {this.state.workout}></WorkoutName>
         <Example></Example>
         <Timer></Timer>
         <ControlPanel></ControlPanel>
