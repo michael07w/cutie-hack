@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Example() {
+function Example(props) {
   return (
     <div className="workout-example-container">
       <img
